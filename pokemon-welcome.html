@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモンワールドへようこそ！</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .pokemon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .pokemon-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pokemon-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .pokemon-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .pokemon-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .pokemon-type {
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .pokemon-description {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .fire { background: #e74c3c; }
+        .water { background: #3498db; }
+        .grass { background: #2ecc71; }
+        .electric { background: #f1c40f; }
+        .psychic { background: #9b59b6; }
+        .normal { background: #95a5a6; }
+
+        .welcome-section {
+            background: rgba(255,255,255,0.9);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .start-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .start-button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 ポケモンワールドへようこそ！ 🌟</h1>
+            <p class="subtitle">素晴らしい冒険があなたを待っています</p>
+        </header>
+
+        <div class="welcome-section">
+            <p class="welcome-text">
+                ここは不思議な生き物「ポケモン」たちが住む世界です。<br>
+                彼らと友達になって、一緒に冒険の旅に出かけましょう！<br>
+                どのポケモンがあなたのパートナーになるでしょうか？
+            </p>
+            <button class="start-button">冒険を始める</button>
+        </div>
+
+        <div class="pokemon-grid">
+            <div class="pokemon-card">
+                <div class="pokemon-icon">🔥</div>
+                <h3 class="pokemon-name">リザードン</h3>
+                <span class="pokemon-type fire">ほのおタイプ</span>
+                <p class="pokemon-description">
+                    炎を吐く強大なドラゴンポケモン。空を自由に飛び回り、熱い炎で敵を圧倒します。
+                </p>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="pokemon-icon">💧</div>
+                <h3 class="pokemon-name">カメックス</h3>
+                <span class="pokemon-type water">みずタイプ</span>
+                <p class="pokemon-description">
+                    甲羅から水を噴射する巨大なカメポケモン。防御力が高く、仲間を守る頼もしい存在です。
+                </p>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="pokemon-icon">🌿</div>
+                <h3 class="pokemon-name">フシギバナ</h3>
+                <span class="pokemon-type grass">くさタイプ</span>
+                <p class="pokemon-description">
+                    背中の大きな花が特徴的な草ポケモン。甘い香りで敵を魅了し、自然の力を操ります。
+                </p>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="pokemon-icon">⚡</div>
+                <h3 class="pokemon-name">ピカチュウ</h3>
+                <span class="pokemon-type electric">でんきタイプ</span>
+                <p class="pokemon-description">
+                    みんなのアイドル！電気を操る可愛いネズミポケモン。頬袋に電気を蓄えています。
+                </p>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="pokemon-icon">🔮</div>
+                <h3 class="pokemon-name">ミュウツー</h3>
+                <span class="pokemon-type psychic">エスパータイプ</span>
+                <p class="pokemon-description">
+                    強力な超能力を持つ伝説のポケモン。テレパシーで人の心を読むことができます。
+                </p>
+            </div>
+
+            <div class="pokemon-card">
+                <div class="pokemon-icon">😴</div>
+                <h3 class="pokemon-name">カビゴン</h3>
+                <span class="pokemon-type normal">ノーマルタイプ</span>
+                <p class="pokemon-description">
+                    いつも眠っている大きなポケモン。1日に400kgの食べ物を食べて、すぐに眠ってしまいます。
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 ポケモンワールド - あなたの冒険が今始まる</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector('.start-button').addEventListener('click', function() {
+            alert('🎉 冒険の始まりです！どのポケモンを選びますか？');
+        });
+
+        document.querySelectorAll('.pokemon-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const pokemonName = this.querySelector('.pokemon-name').textContent;
+                alert(`${pokemonName}を選びました！一緒に冒険しましょう！`);
+            });
+        });
+    </script>
+</body>
+</html>
